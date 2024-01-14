@@ -1,0 +1,17 @@
+$responsive-desktop: 1024px;
+$responsive-mobile: 768px;
+
+$responsive-desktop-max: $responsive-desktop - 1px;
+$responsive-mobile-max: $responsive-mobile - 1px;
+
+@mixin tablet() {
+  @media (max-width: $responsive-desktop-max) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: $responsive-mobile-max) {
+    @content;
+  }
+}

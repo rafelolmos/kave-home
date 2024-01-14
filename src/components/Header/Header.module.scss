@@ -1,0 +1,44 @@
+@use '@/src/styles/settings' as *;
+
+.header {
+    background-color: $white;
+    border-bottom: 0.25px solid $gray;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    &__content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 144rem;
+        padding: 1.6rem 2.2rem 1.6rem 3rem;
+
+        &--image {
+            position: relative;
+
+            span {
+                align-items: center;
+                background-color: $white;
+                border: .1px solid $black;
+                border-radius: 50%;
+                color: $black;
+                display: flex;
+                height: 1.5rem;
+                justify-content: center;
+                position: absolute;
+                right: -0.5rem;
+                top: -0.5rem;
+                width: 1.5rem;
+            }
+        }
+
+        &--filled {
+            path {
+                fill: $black;
+                stroke: $black;
+            }
+        }
+    }
+}

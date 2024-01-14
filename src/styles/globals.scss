@@ -1,0 +1,58 @@
+@use './settings' as *;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  color: $dark-gray;
+  font-family: 'Noto Serif';
+  font-size: 10px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+
+  @include mobile {
+    padding: 2.2rem;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Noto Serif';
+  color: $dark-gray;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

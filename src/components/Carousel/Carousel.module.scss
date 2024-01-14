@@ -1,0 +1,33 @@
+@use '@/src/styles/settings' as *;
+
+.container {
+    display: flex;
+    gap: 2.4rem;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 2rem;
+
+    .categories__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        &__card {
+            align-items: center;
+            background-color: $light-gray;
+            height: 14.9rem;
+            width: 19.8rem;
+        }
+
+        &__title {
+            font-family: Poppins;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-align: center;
+            text-decoration-line: underline;
+        }
+    }
+}

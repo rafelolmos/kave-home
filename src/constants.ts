@@ -1,0 +1,1 @@
+export const KAVE_FAVOURITES = 'KAVE_FAVOURITES';

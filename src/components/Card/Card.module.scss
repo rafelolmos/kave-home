@@ -1,0 +1,151 @@
+@use '@/src/styles/settings' as *;
+
+.card {
+    color: $dark-gray;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: Poppins;
+    position: relative;
+    width: 21.36rem;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    &__image {
+        background-color: $light-gray;
+        height: 26.7rem;
+        object-fit: contain;
+
+        &:hover {
+            object-fit: none;
+        }
+
+        @include mobile {
+            height: unset;
+            width: 100%;
+        }
+    }
+
+    @keyframes heartbeat {
+
+        0%,
+        50%,
+        100% {
+            transform: scale(1);
+        }
+
+        25%,
+        75% {
+            transform: scale(1.25);
+        }
+    }
+
+    &__product {
+        position: relative;
+    }
+
+    &__favourite {
+        cursor: pointer;
+        position: absolute;
+        top: 1.88rem;
+        right: 2.18rem;
+
+        &--selected {
+            animation: heartbeat 0.5s ease;
+
+            path {
+                fill: $red;
+                stroke: $red;
+            }
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 2.1rem;
+            margin-top: 2.08rem;
+            margin-bottom: 1rem;
+        }
+
+        &__price {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &--detail {
+        flex-direction: row;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        .card__product {
+            position: relative;
+            width: 60%;
+            padding-bottom: 75%;
+
+            @include tablet {
+                width: 100%;
+                padding-bottom: 125%;
+            }
+
+            img {
+                height: 100%;
+                cursor: default;
+
+                &:hover {
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .card__description {
+            color: $black;
+            font-weight: 400;
+            line-height: 2.4rem;
+            padding: 2.3rem 4rem;
+            width: 40%;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            &__title {
+                font-size: 3.6rem;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            &__category {
+                color: $middle-gray;
+                font-size: 1.6rem;
+            }
+
+            &__price {
+                font-size: 2.4rem;
+                font-weight: 500;
+                margin-bottom: 1.2rem;
+                margin-top: 2.8rem;
+
+                span {
+                    font-size: 1.6rem;
+                    vertical-align: 25%;
+                }
+            }
+
+            &__material {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

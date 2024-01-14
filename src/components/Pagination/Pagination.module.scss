@@ -1,0 +1,29 @@
+.pagination {
+    cursor: pointer;
+    display: flex;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    gap: 1rem;
+    letter-spacing: 0.2rem;
+    line-height: normal;
+
+    &__arrow {
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    &__page {
+        transition: transform 0.25s ease;
+
+        &--active {
+            font-weight: bold;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+}
