@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import dynamic from 'next/dynamic';
 
@@ -29,6 +29,15 @@ const ProductsList = (props: ProductsListProps) => {
     currentPage,
     itemsPerPage,
   });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, [currentPage]);
 
   return (
     <main className={styles.products}>
